@@ -1,18 +1,15 @@
-function adicionarVisor(valor){
-    let visor = document.getElementById('visor')
 
+function adicionarNoVisor(valor) {
+    const visor = document.querySelector("#visor");
     visor.value += valor
 }
 
-function calcular (){
+function calcular(){
     document.getElementById('visor').value = eval(document.getElementById('visor').value)
 }
 
-function apagarParcial(){
-    document.getElementById('visor').value = ""
-}
 
-function apagarTotal(){
+function limparVisor(){
     document.getElementById('visor').value = ""
 
 }
