@@ -1,41 +1,35 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Calculadora</title>
     <link rel="stylesheet" href="style.css">
+    <title>Calculadora</title>
   </head>
   <body>
-    <div class="calculadora">
-        <input type="text" class="visor" id="visor" disabled> 
+  <div class="calculadora">
+    
+        <input type="text" name="visor" id="visor" class="visor" disabled>
+    
     <div class="botoes">
-        <button class="apagar" onclick="apagarParcial('')">C</button>
-
-        <button onclick="adicionarVisor('7')">7</button>
-        <button onclick="adicionarVisor('8')">8</button>
-        <button onclick="adicionarVisor('9')">9</button>
-        <button onclick="adicionarVisor('/')">/</button>
-
-        <button onclick="adicionarVisor('4')">4</button>
-        <button onclick="adicionarVisor('5')">5</button>
-        <button onclick="adicionarVisor('6')">6</button>
-        <button onclick="adicionarVisor('-')">-</button>
-
-        <button onclick="adicionarVisor('1')">1</button>
-        <button onclick="adicionarVisor('2')">2</button>
-        <button onclick="adicionarVisor('3')">3</button>
-        <button onclick="adicionarVisor('*')">*</button>
-
-        <button onclick="adicionarVisor('0')">0</button>
-        <button onclick="adicionarVisor('.')">.</button>
-        <button class = "calcular" onclick="calcular()">=</button>
-        <button class="soma" onclick="adicionarVisor('+')">+</button>
-        <button onclick="adicionarVisor('%')">%</button>
-
+      <button onclick="adicionarNoVisor('7')">7</button>
+      <button onclick="adicionarNoVisor('8')">8</button>
+      <button onclick="adicionarNoVisor('9')">9</button>
+      <button onclick="adicionarNoVisor('/')">/</button>
+      <button onclick="adicionarNoVisor('4')">4</button>
+      <button onclick="adicionarNoVisor('5')">5</button>
+      <button onclick="adicionarNoVisor('6')">6</button>
+      <button onclick="adicionarNoVisor('*')">*</button>
+      <button onclick="adicionarNoVisor('1')">1</button>
+      <button onclick="adicionarNoVisor('2')">2</button>
+      <button onclick="adicionarNoVisor('3')">3</button>
+      <button onclick="adicionarNoVisor('-')">-</button>
+      <button onclick="adicionarNoVisor('0')">0</button>
+      <button class="calcular" onclick="limparVisor()">C</button>
+      <button onclick="calcular()">=</button>
+      <button onclick="adicionarNoVisor('+')">+</button>
     </div>
-</div>
-
+  </div>
     <script src="script.js"></script>
   </body>
 </html>
