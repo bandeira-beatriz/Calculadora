@@ -1,89 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Baumans&display=swap');
+
 body{
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     min-height: 100vh;
-    background-color: #FFF3B0;
     margin: 0;
+    background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fbc2eb, #a6c1ee);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+}
+
+.calculadora{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: #40376E;
+    text-align: center;
+    min-height: 350px;
+    max-width: 300px;
+    border: 2px solid #40376E;
+    border-radius: 8px;
+    padding: 5px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
+    gap: 20px;
 }
 
 .visor{
     height: 40px;
-    width: 80%;
+    width: 90%;
     padding: 5px;
     border: 0.1px solid black;
     border-radius: 6px;
     text-align: right;
     margin-top: 30px;
-}
-
-.calculadora{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    background-color: #E09F3E;
-    text-align: center;
-    min-height: 400px;
-    max-width: 300px;
-    border: 2px solid #E09F3E;
-    border-radius: 8px;
-    padding: 5px;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
-    gap: 20px;
-
+    font-family: "Baumans", system-ui;
+    font-size: 15px;
+    color: black;
+    background-color: #F8F8F8;
 }
 
 .botoes{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 3px;
-
-
+    gap: 5px;
+    padding: 5px;
+    
 }
 
 button{
-    padding: 15px;
-    text-align: center;
-    background-color: #540B0E;
-    border-radius: 8px;
-    border: 0.1px solid black;
-    color: white;
-    cursor: grab;
-    transition: all 0.5s;
+    font-family: "Baumans", system-ui;
+    height: 50px;
+    width: 50px;
+    border-radius: 5px;
+    font-size: large;
+    background-color: #D4E4BC;
+    cursor: pointer;
 }
 
 button:hover {
-    background-color: #FFF3B0;
+    background-color: #8ce605;
     color: black;
 
 }
 
 button:active{
-    background-color: #540B0E;
+    background-color: #466e09;
     color: white;
-    cursor: grabbing;
-}
-
-.soma{
-    grid-column: span 2;
+    
 }
 
 .calcular{
-    grid-row: span 2;
+    background-color: #b4dd77;
 }
 
-.apagar{
-    background-color: #c70c0f;
-    color: white;
-
-}
-
-.apagar:hover{
-    background-color: #5e0405;
-    color: white;
-}
-
-.apagar:active{
-    background-color: #c73a3c;
-    color: white;
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
